@@ -1,7 +1,7 @@
 class Main {
     public static void main(String[] args) {
         System.out.println("Hello");
-        boolean isGreenLight = false;
+        boolean isGreenLight = true;
 
         int speedOfPlayer1 = 5;
         int speedOfPlayer2 = 0;
