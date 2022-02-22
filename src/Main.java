@@ -1,11 +1,11 @@
 class Main {
     public static void main(String[] args) {
         System.out.println("Hello");
-        boolean isGreenLight = true;
+        boolean isGreenLight = false;
 
-        int speedOfPlayer1 = 5;
-        int speedOfPlayer2 = 0;
-        int speedOfPlayer3 = 2;
+        int speedOfPlayer1 = 10;
+        int speedOfPlayer2 = 3;
+        int speedOfPlayer3 = 8;
 
         int droppedOut = 0;
         if (isGreenLight) {
