@@ -10,26 +10,16 @@ class Main {
         int droppedOut = 0;
         if (isGreenLight) {
             System.out.println("Выбывает " + droppedOut); // если зеленый свет
-        }
-        else {
-              if (speedOfPlayer1 != 0) {
+        } else {
+            if (speedOfPlayer1 != 0) {
                 droppedOut += 1;
-              }
-              else {
-                droppedOut += 0;
-              } // Первый участник
-              if (speedOfPlayer2 != 0) {
+            }// Первый участник
+            if (speedOfPlayer2 != 0) {
                 droppedOut += 1;
-              }
-              else {
-                droppedOut += 0;
-              } // Второй участник
-              if (speedOfPlayer3 != 0) {
+            }// Второй участник
+            if (speedOfPlayer3 != 0) {
                 droppedOut += 1;
-              }
-              else {
-                droppedOut += 0;
-              } // Третий участник
+            }// Третий участник
             System.out.println("Выбывает " + droppedOut); // если красный свет
         }
 
