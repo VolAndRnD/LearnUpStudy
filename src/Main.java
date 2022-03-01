@@ -1,33 +1,48 @@
 class Main {
+    public static int[] speed() {
+        int[] speedOfPlayer = {5, 0, 2};
+        return speedOfPlayer;
+    }
     public static void main(String[] args) {
-        System.out.println("Hello");
-        boolean isGreenLight = true;
+        boolean isGreenLight = false;
+        int[] remain = speed();
+                int sumDroppedOut = 0;
 
-        int speedOfPlayer1 = 5;
-        int speedOfPlayer2 = 0;
-        int speedOfPlayer3 = 2;
+        for (int i = 0; i < speed().length; i++) {
+            if (isGreenLight) { sumDroppedOut +=0;
+            }
+            else { if (remain[i] >0) {
+                   sumDroppedOut += 1;
+                 }
+            }
 
-        int droppedOut = 0;
-        if (isGreenLight) {
-            System.out.println("Выбывает " + droppedOut); // если зеленый свет
-        } else {
-            if (speedOfPlayer1 != 0) {
-                droppedOut += 1;
-            }// Первый участник
-            if (speedOfPlayer2 != 0) {
-                droppedOut += 1;
-            }// Второй участник
-            if (speedOfPlayer3 != 0) {
-                droppedOut += 1;
-            }// Третий участник
-            System.out.println("Выбывает " + droppedOut); // если красный свет
+        }
+        System.out.println("Количество выбывших " + sumDroppedOut);
+
+        for (int ii = 0; ii < speed().length; ii++) {
+            if (isGreenLight) {
+                sumDroppedOut +=0;
+            }
+            else {
+                  if (remain[ii] >0 ) {
+                    System.out.println("Выбывает игрок со скоростью " + remain[ii]);
+                  }
+            }
+        }
+
+        for (int iii = 0; iii < speed().length; iii++) {
+            if (isGreenLight) {
+                System.out.println("Остается игрок со скоростью " + remain[iii]);
+            }
+            else {
+                  if (remain[iii] < 1) {
+                    System.out.println("Остается игрок со скоростью " + remain[iii]);
+                  }
+            }
         }
 
     }
 }
-        // Допишите здесь логику так, что будет подсчитано и выведено
-        // количество игроков, которые выбывают.
-        // Если свет зелёный, то проходят все игроки (0 выбывают).
-        // Если свет красный, то выбывает каждый, чья скорость не 0.
+
 
 
