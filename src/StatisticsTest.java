@@ -5,6 +5,9 @@ public class StatisticsTest {
 
 
 
+
+
+
     @Test
     public void ShouldDroppedOut() {
         int[] speedOfPlayer = {5, 0, 2};
@@ -28,6 +31,22 @@ public class StatisticsTest {
         int actual = Statistics.alldroppedOut(speedOfPlayer);
         int expected = 2;
     }
+    @Test
+    public void ShouldDroppedOut1() {
+        int[] speedOfPlayer = {4,6,1,-1,3};
+        int[] actual = Statistics.droppedOut(speedOfPlayer);
+        int[] expected = { 4,6,1,3};
+        Assertions.assertArrayEquals(expected,actual);
+    }
+
+    @Test
+    public void ShouldRemainOut1() {
+
+
+    boolean actual = Main.greenLight() ;
+    boolean expected = false;
+    Assertions.assertEquals(expected,actual);
+}
 }
 
 

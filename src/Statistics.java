@@ -1,8 +1,7 @@
  public class Statistics {
 
-     public static int alldroppedOut( int[] speedOfPlayer) {
+     public static int alldroppedOut( int[] speedOfPlayer) { // количество выбывающих
          int sumDroppedOut = 0;
-
 
          for (int speed : speedOfPlayer) {
              if (Main.greenLight()) {
@@ -15,70 +14,61 @@
                  }
              }
          }
-         System.out.println("Выбывает всего игроков " + sumDroppedOut);
-         return sumDroppedOut;
+     return sumDroppedOut;
      }
 
 
      public static int[] droppedOut( int[] speedOfPlayer) {
-         int sumDroppedOut = 0;
-         int cnt = 0;
-
-         for (int speed : speedOfPlayer) {
-             if (Main.greenLight()) {
-                 sumDroppedOut += 0;
-             } else {
+     int cnt = 0;
+         for (int speed : speedOfPlayer) { // счетчик размера массива
+            if (Main.greenLight()) {
+            } else {
                  if (speed > 0) {
-                     System.out.println("Выбывает игрок, чья скорость " + speed);
                      cnt++;
                  }
+            }
+         }
+
+     int[] ans = new int[cnt];
+     int i = 0;
+         for (int speed : speedOfPlayer) { //массив выбывающих
+             if (Main.greenLight()) {
+             } else {
+                     if (speed > 0) {
+                     ans[i] = speed;
+                     i++;
+                     }
              }
          }
-         int[] ans = new int[cnt];
-
-             int i = 0;
-             for (int speed : speedOfPlayer) {
-                 if (Main.greenLight()) {
-                     sumDroppedOut += 0;
-                 } else {
-                     if (speed > 0) {
-                         ans[i] = speed;
-                         i++;
-                     }
-                 }
-             }
      return ans;
      }
-     public static int[] remain( int[] speedOfPlayer) {
-                  int sumDroppedOut = 0;
-         int cnt = 0;
 
-         for (int speed : speedOfPlayer) {
+     public static int[] remain( int[] speedOfPlayer) {
+         int cnt = 0;
+         for (int speed : speedOfPlayer) { // счетчик для массива
              if (Main.greenLight()) {
-                 sumDroppedOut += 0;
-                 System.out.println( "Остаются игрок, чья скорость " + speed);
-             }
-             else {
-                 if (speed < 1) {
-                     System.out.println("Остается игрок, чья скорость " + speed);
-                     cnt++;
-                 }
+                 cnt++;
+             } else {
+                    if (speed < 1) {
+                    cnt++;
+                    }
              }
          }
-         int[] ans1 = new int[cnt];
 
-         int i = 0;
-         for (int speed : speedOfPlayer) {
+         int[] ans1 = new int[cnt];
+         int ii = 0;
+         for (int speed : speedOfPlayer) { //массив выживших
              if (Main.greenLight()) {
-                 sumDroppedOut += 0;
+                 ans1[ii]=speed;
+                 ii++;
              } else {
                  if (speed < 1) {
-                     ans1[i] = speed;
-                     i++;
+                     ans1[ii] = speed;
+                     ii++;
                  }
              }
          }
-         return ans1;
+     return ans1;
      }
 
  }
