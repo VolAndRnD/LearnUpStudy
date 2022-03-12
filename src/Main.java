@@ -6,16 +6,16 @@ class Main {
 
          int[] speedOfPlayer = {5, 0, 2};
 
+         Statistics.isGreenlight = false;
+         System.out.println (" Количество выбывших: " + Statistics.alldroppedOut(speedOfPlayer));
+         System.out.println( " Выбывшие: " + Arrays.toString(Statistics.droppedOut(speedOfPlayer)));
+         System.out.println( " Выжившие: " + Arrays.toString(Statistics.remain(speedOfPlayer)));
 
          Statistics.isGreenlight = true;
-         System.out.println(" Количество выбывших: " + Statistics.alldroppedOut(speedOfPlayer));
-         System.out.println(" Выбывшие: " + Arrays.toString(Statistics.droppedOut(speedOfPlayer)));
-         System.out.println(" Выжившие: " + Arrays.toString(Statistics.remain(speedOfPlayer)));
+         System.out.println (" Количество выбывших: " + Statistics.alldroppedOut(speedOfPlayer));
+         System.out.println( " Выбывшие: " + Arrays.toString(Statistics.droppedOut(speedOfPlayer)));
+         System.out.println( " Выжившие: " + Arrays.toString(Statistics.remain(speedOfPlayer)));
 
-         Statistics.isGreenlight = false;
-         System.out.println(" Количество выбывших: " + Statistics.alldroppedOut(speedOfPlayer));
-         System.out.println(" Выбывшие: " + Arrays.toString(Statistics.droppedOut(speedOfPlayer)));
-         System.out.println(" Выжившие: " + Arrays.toString(Statistics.remain(speedOfPlayer)));
      }
  }
 

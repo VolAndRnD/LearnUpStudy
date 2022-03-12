@@ -25,6 +25,15 @@ public class StatisticsTest {
         int[] expected = {0};
         Assertions.assertArrayEquals(expected, actual);
     }
+
+
+    @Test
+    public void ShouldDroppedOut1() {
+        int[] speedOfPlayer = {4,6,1,-1,3};
+        int[] actual = Statistics.droppedOut(speedOfPlayer);
+        int[] expected = { 4,6,1,3};
+        Assertions.assertArrayEquals(expected,actual);
+    }
     @Test
     public void ShouldSumDroppedOut() {
         int[] speedOfPlayer = {5, 0, 2};
@@ -33,11 +42,11 @@ public class StatisticsTest {
         Assertions.assertEquals(expected,actual);
     }
     @Test
-    public void ShouldDroppedOut1() {
-        int[] speedOfPlayer = {4,6,1,-1,3};
-        int[] actual = Statistics.droppedOut(speedOfPlayer);
-        int[] expected = { 4,6,1,3};
-        Assertions.assertArrayEquals(expected,actual);
+    public void ShouldSumDroppedOut1() {
+        int[] speedOfPlayer = {8, 0, 4,6,1,4};
+        int actual = Statistics.alldroppedOut(speedOfPlayer);
+        int expected = 5;
+        Assertions.assertEquals(expected, actual);
     }
 }
 

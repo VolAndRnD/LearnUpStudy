@@ -1,6 +1,6 @@
  public class Statistics {
 
-     static boolean isGreenlight = true;
+     static boolean isGreenlight = false;
 
      public static int alldroppedOut( int[] speedOfPlayer) { // количество выбывающих
          int sumDroppedOut = 0;
